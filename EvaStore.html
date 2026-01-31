@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaStore.html -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Eva Flower Store</title>
+<style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdfaff;
+            color: #4b3a58;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          
+        }
+
+        .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #4b3a58;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+        
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4b3a58;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        nav a:hover {
+            color: #6c4a7c;
+        }
+
+        .search-box {
+            border: 1px solid #cbb7dd;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #f9f4fd;
+        }
+
+        .hero {
+            position: relative;
+            background: url('https://i.ibb.co/DDQQZpSp/photo-13-2025-08-02-10-57-53.jpg') center/cover no-repeat;
+            color: #fff;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(75, 58, 88, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #a97cb7;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+
+        }
+
+        .btn:hover {
+            background-color: #8b64a0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 50px 0 20px;
+            color: #4b3a58;
+        }
+
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 40px 40px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            padding: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .promo {
+            background-color: #f1e6f7;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .promo h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .socials a {
+            text-decoration: none;
+            color: #4b3a58;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #cbb7dd;
+            text-align: center;
+            padding: 20px;
+            color: #4b3a58;
+        }
+    
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 5px 10px 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 0.95em;
+        padding: 10px 25px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+        margin: 30px 0 15px;
+    }
+
+    .catalog {
+        padding: 0 20px 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .promo h2 {
+        font-size: 1.5em;
+    }
+
+    .search-box {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+
+.delivery-categories {
+    background-color: #f2f0f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+.category-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.category-item p {
+    margin: 15px;
+    font-weight: bold;
+    color: #4b3a58;
+    font-size: 1em;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+.delivery-categories a {
+    text-decoration: none;
+}
+
+
+.hero-slider {
+    position: relative;
+    height: 750px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(75, 58, 88, 0.4);
+    z-index: 1;
+}
+
+.slide .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-slider .btn {
+    background-color: #a97cb7;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.slider-nav .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-nav .dot.active,
+.slider-nav .dot:hover {
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 400px;
+    }
+
+    .slide .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .slide .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-slider .btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .slider-nav .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+.slider-arrows {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.arrow {
+    font-size: 2.0em;
+    color: #696969;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    padding: 0;
+    margin: 0 10px;
+    background: none;
+    pointer-events: auto;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+
+.arrow.right {
+    margin-right: 30px;
+}
+
+.arrow.left {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 400px;
+    }
+
+    .slide .hero-content h1 {
+        font-size: 1.4em;
+    }
+
+    .slide .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-slider .btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .slider-nav .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .arrow {
+        font-size: 1.8em;
+    }
+
+    .arrow.right {
+        margin-right: 15px;
+    }
+
+    .arrow.left {
+        margin-left: 15px;
+    }
+}
+
+.slider-arrows {
+    justify-content: center;
+    gap: 30px;
+    pointer-events: none;
+}
+
+.arrow {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 2em;
+    color: #4b3a58;
+    margin: 0;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+   
+}
+
+@media (max-width: 768px) {
+    .slider-arrows {
+        top: auto;
+        bottom: 60px;
+        gap: 20px;
+    }
+
+    .arrow {
+        font-size: 1.6em;
+        padding: 6px 10px;
+    }
+}
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.parallax-banner {
+  height: 500px;
+  background-image: url('https://i.ibb.co/DDQQZpSp/photo-13-2025-08-02-10-57-53.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.OLD_custom-bouquet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background-color: #fdfaff;
+}
+
+.custom-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.custom-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.custom-title {
+  margin: 15px 0 10px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #4b3a58;
+}
+
+.price-button {
+  background-color: #a97cb7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease;
+}
+
+.price-button:hover {
+  background-color: #8b64a0;
+}
+
+.custom-bouquet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 30px;
+  background-color: #fdfaff;
+}
+
+.custom-card {
+  background: none;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.custom-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.custom-title-link {
+  margin: 10px 0 0;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: #4b3a58;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.custom-title-link:hover {
+  color: #a97cb7;
+}
+
+.custom-price {
+  text-align: left;
+  font-size: 0.9em;
+  color: #4b3a58;
+  margin-top: 5px;
+  padding-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .custom-bouquet-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .custom-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+}
+</style>
+<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    color: #4b3a58;
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 10px;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 220px;
+    z-index: 999;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 220px;
+    z-index: 999;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    border-radius: 8px;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #4b3a58;
+    font-size: 0.9em;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1e6f7;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu:hover .dropdown-submenu {
+    display: block;
+}
+
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.dropdown-submenu a {
+    padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu, .dropdown-submenu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        min-width: 200px;
+        z-index: 999;
+        display: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .submenu .dropdown-submenu {
+        left: 100%;
+        top: 0;
+    }
+
+    .submenu.open .dropdown-submenu {
+        display: block;
+    }
+
+    .dropdown-toggle {
+        padding: 10px 20px;
+    }
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdown = document.querySelector(".dropdown");
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+
+    toggle.addEventListener("click", function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function(e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("open");
+        }
+    });
+});
+document.querySelectorAll('.submenu > .dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = toggle.closest('.submenu');
+        parent.classList.toggle('open');
+    });
+});
+</script>
+
+<style>
+/* Новый стиль для обновлённого хедера */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #fdfaff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #4b3a58;
+  text-decoration: none;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.main-nav a, .dropdown-toggle {
+  font-weight: 600;
+  color: #4b3a58;
+  text-decoration: none;
+  font-size: 0.95em;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu, .dropdown-submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 100;
+}
+.dropdown-menu a,
+.dropdown-submenu a {
+  padding: 10px 15px;
+  font-size: 0.9em;
+}
+.dropdown-toggle-input {
+  display: none;
+}
+.dropdown-toggle-input:checked + .dropdown-toggle + .dropdown-menu {
+  display: flex;
+}
+.submenu {
+  position: relative;
+}
+.dropdown-toggle-input:checked + .dropdown-toggle + .dropdown-submenu {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+.contact-info .phone {
+  font-weight: bold;
+  color: #4b3a58;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+.menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #4b3a58;
+}
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .menu-toggle:checked ~ .main-nav {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .contact-info {
+    display: none;
+  }
+  .dropdown-menu, .dropdown-submenu {
+    box-shadow: none;
+  }
+}
+</style>
+
+<style>
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  .submenu:hover .dropdown-submenu {
+    display: flex;
+  }
+}
+</style>
+</head><body>
+<header class="main-header">
+<a class="logo" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaStore.html">Цветы Ева</a>
+<input class="menu-toggle" id="menu-toggle" type="checkbox">
+<label class="menu-icon" for="menu-toggle">☰</label>
+<nav class="main-nav">
+<div class="dropdown">
+<input class="dropdown-toggle-input" id="flowers-toggle" type="checkbox">
+<label class="dropdown-toggle" for="flowers-toggle">ВСЕ ЦВЕТЫ ˅</label>
+<div class="dropdown-menu">
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaAlstromery.html">Альстромерия</a>
+<div class="submenu">
+<input class="dropdown-toggle-input" id="bouquets-toggle" type="checkbox">
+<label class="dropdown-toggle" for="bouquets-toggle">Букеты &gt;</label>
+<div class="dropdown-submenu">
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaAvtor.html">Авторские букеты</a>
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaMono.html">Моно букеты</a>
+</div>
+</div>
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaGipsa.html">Гипсофила</a>
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaDiantus.html">Диантусы</a>
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaroses.html">Розы</a>
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaKorobki.html">Коробки и корзины</a><a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaaltay.html">Хризантема</a>
+</div>
+</div>
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evacqr.html">Доставка</a>
+<a href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaMe.html">О нас</a>
+</nav>
+<div class="contact-info">
+<a class="phone" href="tel:+79006791444">+7 (900) 679-14-44</a>
+</div>
+</header>
+
+<section class="hero-slider">
+<div class="slide" style="background-image: url(https://i.ibb.co/yKDxjfD/photo-2025-07-29-20-58-36.jpg);">
+<div class="hero-content">
+<h1>Заботливый цветочный сервис</h1>
+<p>Лучшие букеты</p>
+<a class="btn" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaAvtor.html">Смотреть Авторские букеты</a>
+</div>
+</div>
+<div class="slide active" style="background-image: url(&#39;https://i.ibb.co/KzwPntjy/photo-2025-08-02-11-56-08.jpg&#39;);">
+<div class="hero-content">
+<h1>Свежие поставки цветов</h1>
+<p>Прямо с аукциона Голландии</p>
+<a class="btn" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaaltay.html">Смотреть Хризантемы</a>
+</div>
+</div>
+<div class="slider-nav"><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="slide" style="background-image: url(&#39;https://i.ibb.co/ccT7xxwg/991a6cce0c7dde826356a8bd319bcab2-1.jpg&#39;);">
+<div class="hero-content">
+<h1>Цветы к любому случаю</h1>
+<p>Улыбка в каждом букете</p>
+<a class="btn" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaMono.html">Смотреть моно букеты</a>
+</div>
+</div>
+<div class="slide" style="background-image: url(&#39;https://i.ibb.co/HD62jVkc/photo-10-2025-07-30-20-22-01.jpg&#39;);">
+<div class="hero-content">
+<h1>Оперативная доставка</h1>
+<p>До двери за 2 часа</p>
+<a class="btn" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaroses.html">Смотреть розы</a>
+</div>
+</div>
+<div class="slide" style="background-image: url(&#39;https://i.ibb.co/0ydPMbZW/photo-13-2025-08-02-10-57-53.jpg&#39;);">
+<div class="hero-content">
+<h1>Коробки и корзины</h1>
+<p>Акции</p>
+<a class="btn" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaKorobki.html">Смотреть коробки</a>
+</div>
+</div>
+<div class="slider-arrows">
+<span class="arrow left">❮</span>
+<span class="arrow right">❯</span>
+</div>
+</section>
+<section class="delivery-categories">
+<h2 class="section-title">Доставка цветов и букетов в Омске</h2>
+<div class="category-grid">
+<a class="category-item" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaAvtor.html">
+<img alt="Авторские букеты" src="./EvaStore_files/photo-3-2025-07-30-20-22-01.jpg">
+<p>Авторские букеты →</p>
+</a>
+<a class="category-item" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaMono.html">
+<img alt="Букеты моно" src="./EvaStore_files/photo-2-2025-08-02-10-57-53.jpg">
+<p>Букеты моно →</p>
+</a>
+<a class="category-item" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaroses.html">
+<img alt="Пионовидные розы" src="./EvaStore_files/photo-10-2025-07-30-20-22-01.jpg">
+<p> Розы →</p>
+</a><a class="category-item" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaaltay.html">
+<img alt="ХРИЗАНТЕМЫ" src="./EvaStore_files/photo-2025-08-02-14-39-47.jpg">
+<p>Хризантемы →</p>
+</a>
+</div>
+</section>
+<div class="product">
+<img alt="Букет 2" src="./EvaStore_files/photo-2025-08-06-00-07-55.jpg">
+</div><div class="parallax-banner"><div class="parallax-content">ВСЕМИ ЛЮБИМАЯ ХРИЗАНТЕМА</div></div>
+<div class="section-title">Хризантемы</div><section class="custom-bouquet-grid">
+<div class="custom-card">
+<img alt="Хризантема" src="./EvaStore_files/photo-6-2024-12-22-18-12-05.jpg">
+<a class="custom-title-link" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaaltay.html">Букет из хризантемы и хлопка</a>
+<div class="custom-price">1800₽</div></div>
+<div class="custom-card">
+<img alt="Букет из хризантемы" src="./EvaStore_files/photo-4-2025-07-30-20-22-01.jpg">
+<a class="custom-title-link" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaaltay.html">Букет из хризантемы и статицы</a>
+<div class="custom-price">2000₽</div></div>
+<div class="custom-card">
+<img alt="Букет с оксипеталумом" src="./EvaStore_files/photo-4-2025-08-06-01-02-17.jpg">
+<a class="custom-title-link" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaKorobki.html">Коробка из хризантемы и сталиона</a>
+<div class="custom-price">1690 ₽</div></div>
+<div class="custom-card">
+<img alt="Букет с гипсофилой" src="./EvaStore_files/photo-5-2025-08-06-01-02-17.jpg">
+<a class="custom-title-link" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/EvaKorobki.html">Коробка из хризантемы и эустомы</a>
+<div class="custom-price">2170₽</div></div>
+<div class="custom-card">
+<img alt="Букет из роз и хризантем" src="./EvaStore_files/photo-20-2025-08-02-10-57-53.jpg">
+<a class="custom-title-link" href="file:///C:/%D0%B2%D0%B8%D1%80%D1%83%D1%81%D1%8B/Evaaltay.html">Букет из хризантемы и лимониума</a>
+<div class="custom-price">2000₽</div></div>
+</section><section class="guarantee-section" style="display: flex;flex-wrap: wrap;align-items: center;justify-content: center;gap: 30px;padding: 30px 15px;">
+<div class="guarantee-image" style="flex: 1;min-width: 280px;max-width: 500px;">
+<img alt="Гарантия качества" src="./EvaStore_files/photo-2025-08-05-18-44-07.jpg" style="width: 80%;border-radius: 12px;">
+</div>
+<div class="guarantee-text" style="flex: 1; min-width: 280px; max-width: 550px;">
+<h2 style="font-size: 1.8em; margin-bottom: 15px; color: #4b3a58;">АКЦИЯ НА КЕНИЙКУЮ РОЗУ</h2>
+<p style="margin-bottom: 10px;">СПЕЦИАЛЬНАЯ ЦЕНА НА КЕНИЙСКУЮ РОЗУ </p>
+<p style="margin-bottom: 10px;">СТОИМОСТЬ 1шт. - 80₽</p>
+<p style="margin-bottom: 20px;">Высота розы - 50см </p>
+</div>
+</section>
+<div class="product">
+<img alt="Букет 2" src="./EvaStore_files/photo-2025-08-03-00-01-16.jpg"></div><section class="guarantee-section" style="display: flex;flex-wrap: wrap;align-items: center;justify-content: center;gap: 30px;padding: 30px 15px;">
+<div class="guarantee-image" style="flex: 1;min-width: 280px;max-width: 500px;">
+<img alt="Гарантия качества" src="./EvaStore_files/photo-2025-08-06-01-01-57.jpg" style="width: 100%; border-radius: 12px;">
+</div>
+<div class="guarantee-text" style="flex: 1; min-width: 280px; max-width: 550px;">
+<h2 style="font-size: 1.8em; margin-bottom: 15px; color: #4b3a58;">Гарантия свежести цветов</h2>
+<p style="margin-bottom: 10px;">Мы гарантируем, что букет будет собран из свежих цветов, ведь у нас каждые 1–2 дня поступают новые цветы.</p>
+<p style="margin-bottom: 10px;">Проверка качества осуществляется в момент передачи букета – если во время вручения цветы будут несвежими – мы заменим букет.</p>
+<p style="margin-bottom: 20px;">Мы легко можем это гарантировать, ведь у нас не бывает несвежих цветов.</p>
+</div>
+</section><section class="guarantee-section" style="display: flex;flex-wrap: wrap;align-items: center;justify-content: center;gap: 30px;padding: 30px 15px;">
+<div class="guarantee-text" style="flex: 1; min-width: 280px; max-width: 550px;">
+<h2 style="font-size: 1.8em; margin-bottom: 15px; color: #4b3a58;">Почему выбирают нас? </h2>
+<p style="margin-bottom: 10px;">1. Широкий ассортимент: В нашем магазине представлен разнообразный выбор цветов и букетов на любой вкус — от классических роз до экзотических растений.</p>
+<p style="margin-bottom: 10px;">2. Качество продукции: Мы гарантируем свежесть и высокое качество наших цветов, что позволяет нашим клиентам наслаждаться красотой и ароматом на протяжении долгого времени.</p>
+<p style="margin-bottom: 20px;">3. Положительные отзывы: Множество довольных клиентов подтверждают качество нашей работы и услуг, что создает доверие к нашему магазину.</p>
+</div>
+<div class="guarantee-image" style="flex: 1;min-width: 280px;max-width: 500px;">
+<img alt="Гарантия качества" src="./EvaStore_files/photo-5-2025-08-02-12-59-53.jpg" style="width: 100%;border-radius: 12px;">
+</div></section><div class="product">
+<img alt="Букет 2" src="./EvaStore_files/photo-2025-08-02-23-44-55-2.jpg"></div><section class="promo">
+<h2>Акции и скидки</h2>
+<p>Подпишитесь на рассылку и получайте специальные предложения каждую неделю.</p>
+<a class="btn" href="https://t.me/evaflowersomsk">Узнать подробнее</a>
+</section>
+<footer>
+<p>© 2025 Цветы Ева | +7 (900) 679-14-44</p>
+<div class="socials">
+<a href="https://t.me/evaflowersomsk">Telegram</a>
+<a href="https://go.2gis.com/gDyy2">2ГИС</a><a href="https://wa.me/79006791444">WhatsApp</a></div>
+</footer>
+<script>
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+let interval;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+    });
+    currentIndex = index;
+}
+
+function startAutoSlide() {
+    interval = setInterval(() => {
+        let next = (currentIndex + 1) % slides.length;
+        showSlide(next);
+    }, 5000);
+}
+
+function resetAutoSlide() {
+    clearInterval(interval);
+    startAutoSlide();
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+        resetAutoSlide();
+    });
+});
+
+// Swipe support
+let startX = 0;
+let isSwiping = false;
+
+document.querySelector('.hero-slider').addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+});
+
+document.querySelector('.hero-slider').addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+    let dx = e.touches[0].clientX - startX;
+    if (Math.abs(dx) > 50) {
+        isSwiping = false;
+        if (dx > 0) {
+            showSlide((currentIndex - 1 + slides.length) % slides.length);
+        } else {
+            showSlide((currentIndex + 1) % slides.length);
+        }
+        resetAutoSlide();
+    }
+});
+
+document.querySelector('.hero-slider').addEventListener('touchend', () => {
+    isSwiping = false;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    startAutoSlide();
+});
+
+document.querySelector('.arrow.left').addEventListener('click', () => {
+    showSlide((currentIndex - 1 + slides.length) % slides.length);
+    resetAutoSlide();
+});
+
+document.querySelector('.arrow.right').addEventListener('click', () => {
+    showSlide((currentIndex + 1) % slides.length);
+    resetAutoSlide();
+});
+</script>
+<style>
+.slider-arrows {
+    justify-content: space-between;
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.arrow {
+    pointer-events: auto;
+    background: none;
+    padding: 8px 12px;
+    font-size: 2.0 em;
+    color: #696969;
+    transition: transform 0.2s;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .slider-arrows {
+        top: 100%;
+        bottom: auto;
+        padding: 0 10px;
+    }
+
+    .arrow {
+        font-size: 1.8em;
+        padding: 6px 10px;
+    }
+}
+</style>
+<script>
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+let interval;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+    });
+    currentIndex = index;
+}
+
+function startAutoSlide() {
+    interval = setInterval(() => {
+        let next = (currentIndex + 1) % slides.length;
+        showSlide(next);
+    }, 5000);
+}
+
+function resetAutoSlide() {
+    clearInterval(interval);
+    startAutoSlide();
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+        resetAutoSlide();
+    });
+});
+
+// Swipe support
+let startX = 0;
+let isSwiping = false;
+
+document.querySelector('.hero-slider').addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+});
+
+document.querySelector('.hero-slider').addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+    let dx = e.touches[0].clientX - startX;
+    if (Math.abs(dx) > 50) {
+        isSwiping = false;
+        if (dx > 0) {
+            showSlide((currentIndex - 1 + slides.length) % slides.length);
+        } else {
+            showSlide((currentIndex + 1) % slides.length);
+        }
+        resetAutoSlide();
+    }
+});
+
+document.querySelector('.hero-slider').addEventListener('touchend', () => {
+    isSwiping = false;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    startAutoSlide();
+});
+</script>
+</body></html>
